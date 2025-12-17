@@ -7,8 +7,8 @@ export default function Hero() {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: ["YOUR FEET \nDESERVE\nTHE BEST"],
-      typeSpeed: 30,
-      backSpeed: 20,
+      typeSpeed: 50,
+      backSpeed: 40,
       loop: true,
     });
 

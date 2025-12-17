@@ -69,29 +69,26 @@
 }
 
 .hero-section {
-  height: 70%;
+  min-height: 70%;
   width: 90vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 
-.hero-section-left .hero-title {
-  height: 235px;
-  width: 100%;
-  text-align: left;
-  font-size: 2rem;
-  line-height: 60px;
+.hero-title {
+  margin-top: 40px;
+  font-size: clamp(1rem, 2.5vw, 3.5rem);
+  line-height: 1.2;
+  height: auto;
 }
+
 .hero-des {
-  height: 40px;
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
+  width: 80%;
   font-size: 0.7rem;
-  padding: 10px;
+  line-height: 1.5;
+  padding: 0;
 }
 
 .hero-section-left .hero-buttons {
@@ -123,9 +120,11 @@
   background: white;
 }
 
-.hero-section-right .shoeImage {
+.shoeImage {
+  max-width: 100%;
   height: auto;
-  width: auto;
+  display: block;
+  margin: auto;
 }
 
 .exploreBtn {
@@ -160,4 +159,102 @@
   background-color: white;
   color: black;
   opacity: 0.8;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: all 0.3s ease;
+}
+.hamburger.open .loginBtn{
+  display:inline;
+  margin: 1rem auto;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .loginBtn {
+    display: none;
+  }
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section-left {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-des {
+    margin: auto;
+  }
+
+  .amazonImage {
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginBtn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    padding-top: 50px;
+    font-size: 1rem;
+  }
+
+  .exploreBtn,
+  .shopBtn {
+    width: 100%;
+  }
 }

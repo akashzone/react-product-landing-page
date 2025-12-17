@@ -1,25 +1,41 @@
 
 import './Home.css';
 import TypedJS from './TypedJS';
+import { useState } from "react";
+
+
 export default function Home() {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
+
             <nav className="navbar">
                 <div className="navbar-logo">
                     <img src="logo.png" alt="Company Logo" className="logo-image" />
                 </div>
-                <div className="nav-menu-items">
-                    <ul className="navbar-menu">
-                        <li className="navbar-item">Home</li>
-                        <li className="navbar-item">Location</li>
-                        <li className="navbar-item">About</li>
-                        <li className="navbar-item">Contact</li>
-                    </ul>
-                </div>
-                <div>
-                    <button className="loginBtn btn">Login</button>
+
+                {/* Desktop menu */}
+                <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
+                    <li className="navbar-item">Home</li>
+                    <li className="navbar-item">Location</li>
+                    <li className="navbar-item">About</li>
+                    <li className="navbar-item">Contact</li>
+                    <li className="menu-login">
+                        <button className="loginBtn">Login</button>
+                    </li>
+                </ul>
+
+                {/* Hamburger */}
+                <div
+                    className={`hamburger ${menuOpen ? "open" : ""}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
+
 
             <main className="main-section">
                 <div className="hero-section">
@@ -45,5 +61,6 @@ export default function Home() {
                 </div>
             </main>
         </>
-    )
+    );
+
 }
