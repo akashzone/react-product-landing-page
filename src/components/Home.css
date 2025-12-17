@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&family=Tangerine:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 3rem;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin-right: 1rem;
+}
+
+.navbar-menu li {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.navbar-menu li:hover {
+  color: grey;
+}
+
+.loginBtn {
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(255, 136, 0);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.main-section {
+  height: calc(100vh - 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section {
+  height: 70%;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.hero-section-left .hero-title {
+  height: 235px;
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 60px;
+}
+.hero-des {
+  height: 40px;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  padding: 10px;
+}
+
+.hero-section-left .hero-buttons {
+  margin: 2rem 0rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-section-left .availableText{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: grey;
+}
+
+.hero-section-left .amazonImage{
+    height: 30px;
+    width: auto;
+    margin: 0.5rem;
+}
+
+
+.hero-section-left,
+.hero-section-right {
+  text-align: left;
+  width: 100%;
+}
+
+.hero-section-right img {
+  background: white;
+}
+
+.hero-section-right .shoeImage {
+  height: auto;
+  width: auto;
+}
+
+.exploreBtn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.shopBtn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(255, 136, 0);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: 2px solid rgb(255, 136, 0);
+  background-color: white;
+  color: rgb(255, 136, 0);
+  opacity: 0.8;
+}
+
+.exploreBtn:hover {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  opacity: 0.8;
+}
